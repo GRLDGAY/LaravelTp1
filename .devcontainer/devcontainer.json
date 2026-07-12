@@ -1,0 +1,37 @@
+{
+    "name": "LaravelBase",
+
+    "dockerComposeFile": [
+        "../docker-compose.yml"
+    ],
+
+    "service": "app",
+
+    "workspaceFolder": "/workspace/projetLaravel",
+
+    "forwardPorts": [
+        8000,
+        8080
+    ],
+
+    "postCreateCommand": "composer --version",
+
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "bmewburn.vscode-intelephense-client",
+                "onecentlin.laravel-blade",
+                "xdebug.php-debug",
+                "MehediDracula.php-namespace-resolver"
+            ],
+
+            "settings": {
+                "php.validate.executablePath": "/usr/local/bin/php",
+                "editor.formatOnSave": true,
+                "files.exclude": {
+                    "**/vendor": true
+                }
+            }
+        }
+    }
+}
